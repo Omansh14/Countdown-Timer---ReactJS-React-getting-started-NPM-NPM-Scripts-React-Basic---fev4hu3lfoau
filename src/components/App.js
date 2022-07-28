@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import '../styles/App.css';
 
 const App = () => {
-  // write your code here 
+  // write your code here np
   const[timerValue,setTimerValue]= useState(0);
   const[intervalId, setIntervalId]= useState(0);
 
@@ -35,7 +35,9 @@ const App = () => {
   }
 
   useEffect(()=>{
+    if(timerValue<1){
     clearInterval(intervalId);
+    }
   },[timerValue]);
 
 
